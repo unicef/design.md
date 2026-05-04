@@ -12,7 +12,8 @@ brand:
   dark: _brand-dark.yml
 
 website:
-  title: UNICEF
+  title: UNICEF DESIGN.md Quarto example
+  site-url: https://unicef.github.io/design.md/
   description: A UNICEF-aligned Quarto website starter with stories, reports, and publishing patterns.
   reader-mode: true
   page-navigation: true
