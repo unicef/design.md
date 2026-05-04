@@ -32,8 +32,11 @@ logo:
     navbar-light:
       path: _brand/unicef-logo-cyan-horizontal.png
       alt: UNICEF logo with tagline in cyan for light backgrounds.
+    sidebar-light:
+      path: _brand/unicef-logo-cyan-vertical.png
+      alt: UNICEF logo with tagline in cyan with the tagline set underneath the wordmark for light backgrounds.
   small: navbar-light
-  medium: navbar-light
+  medium: sidebar-light
 
 typography:
   fonts:

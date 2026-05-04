@@ -32,8 +32,11 @@ logo:
     navbar-dark:
       path: _brand/unicef-logo-white-horizontal.png
       alt: UNICEF logo with tagline in white for dark backgrounds.
+    sidebar-dark:
+      path: _brand/unicef-logo-white-vertical.png
+      alt: UNICEF logo with tagline in white with the tagline set underneath the wordmark for dark backgrounds.
   small: navbar-dark
-  medium: navbar-dark
+  medium: sidebar-dark
 
 typography:
   fonts:
