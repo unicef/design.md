@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Data post thumbnail</title>
+  <desc id="desc">A simplified UNICEF-style data thumbnail with bars, a trend line, and clear color blocking.</desc>
+  <rect width="1200" height="630" fill="#FFFFFF"/>
+  <rect width="350" height="630" fill="#00AEEF"/>
+  <rect x="430" y="120" width="650" height="150" rx="18" ry="18" fill="#B3E7FA"/>
+  <line x1="450" y1="520" x2="1090" y2="520" stroke="#BEBAB6" stroke-width="3"/>
+  <rect x="520" y="330" width="110" height="190" fill="#00AEEF"/>
+  <rect x="700" y="385" width="110" height="135" fill="#0047BB"/>
+  <rect x="880" y="295" width="110" height="225" fill="#FFB500"/>
+  <polyline fill="none" stroke="#004C45" stroke-width="10" points="500,430 650,375 790,345 980,260"/>
+</svg>

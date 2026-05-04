@@ -1,0 +1,26 @@
+---
+title: "Stories and Reports"
+description: "A sample Quarto listing page for UNICEF-style stories, reports, and narrative publishing."
+listing:
+  id: story-list
+  contents: posts
+  type: default
+  sort: "date desc"
+  fields: [image, date, title, description, categories, reading-time]
+  categories: true
+  sort-ui: [date, title]
+  filter-ui: [title, description, categories]
+  page-size: 6
+  image-height: 220px
+---
+
+<p class="lede">This sample listing page now follows Quarto's blog-style pattern by automatically listing content from the `posts/` directory. Add a new post folder with an `index.qmd`, render the site, and it will appear here automatically.</p>
+
+## Featured Content
+
+:::{#story-list}
+:::
+
+::: {.callout-tip title="Listing note"}
+Quarto listings work best when every story page has a clear `title`, `description`, `date`, `categories`, and, when possible, a meaningful `image` and `image-alt` value.
+:::

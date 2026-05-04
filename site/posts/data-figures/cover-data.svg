@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Data article cover placeholder</title>
+  <desc id="desc">A blue, cyan, and white editorial cover placeholder for a UNICEF-style report page with charts and figures.</desc>
+  <rect width="1200" height="630" fill="#FFFFFF"/>
+  <rect width="420" height="630" fill="#00AEEF"/>
+  <rect x="480" y="110" width="620" height="150" rx="14" ry="14" fill="#B3E7FA"/>
+  <rect x="480" y="300" width="620" height="220" rx="14" ry="14" fill="#F7FBFD" stroke="#BEBAB6" stroke-width="3"/>
+  <rect x="520" y="350" width="120" height="130" fill="#00AEEF"/>
+  <rect x="680" y="390" width="120" height="90" fill="#0047BB"/>
+  <rect x="840" y="320" width="120" height="160" fill="#FFB500"/>
+  <text x="70" y="135" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#000000">UNICEF QUARTO DEMO</text>
+  <text x="70" y="250" font-family="Arial, Helvetica, sans-serif" font-size="62" font-weight="300" fill="#000000">Charts</text>
+  <text x="70" y="320" font-family="Arial, Helvetica, sans-serif" font-size="62" font-weight="300" fill="#000000">and Figures</text>
+  <text x="70" y="405" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#000000">A placeholder cover for analytical storytelling and report layouts.</text>
+</svg>

@@ -1,0 +1,23 @@
+---
+title: "Page Not Found"
+toc: false
+---
+
+::: {.hero-unicef}
+<div class="hero-kicker">404</div>
+
+## The page you requested cannot be found
+
+<p class="lede">It may have moved, been renamed, or the link may be outdated. Use the navigation, search, or the links below to keep exploring.</p>
+
+<div class="hero-actions">
+
+[Return home](index.qmd){.btn .btn-primary}
+[Browse stories](stories.qmd){.btn .btn-outline-dark}
+
+</div>
+:::
+
+::: {.callout-note title="Need a stable public link?"}
+For published UNICEF-style sites, add redirects when moving pages and set `site-url` or `site-path` correctly for non-root deployments.
+:::

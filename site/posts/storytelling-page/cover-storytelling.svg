@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Storytelling article cover placeholder</title>
+  <desc id="desc">A blue and white editorial cover placeholder for a UNICEF-style storytelling article.</desc>
+  <rect width="1200" height="630" fill="#F7FBFD"/>
+  <rect width="1200" height="180" fill="#00AEEF"/>
+  <rect x="80" y="250" width="1040" height="250" rx="14" ry="14" fill="#FFFFFF" stroke="#BEBAB6" stroke-width="3"/>
+  <text x="90" y="125" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#000000">UNICEF QUARTO DEMO</text>
+  <text x="120" y="335" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="300" fill="#000000">Designing a UNICEF</text>
+  <text x="120" y="405" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="300" fill="#000000">Storytelling Page in Quarto</text>
+  <text x="120" y="460" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#6E6968">Publication-first layout, calm hierarchy, and clear reading rhythm.</text>
+</svg>

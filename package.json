@@ -1,0 +1,14 @@
+{
+  "name": "unicef-design-md-draft",
+  "private": true,
+  "packageManager": "pnpm@10.28.2",
+  "scripts": {
+    "lint:design": "design.md lint DESIGN.md && design.md lint DESIGN.web-app.md && design.md lint DESIGN.quarto.md",
+    "check": "pnpm run lint:design && quarto render site",
+    "playwright:install": "playwright install chromium"
+  },
+  "devDependencies": {
+    "@google/design.md": "0.1.1",
+    "playwright": "1.59.1"
+  }
+}

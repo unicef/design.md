@@ -1,0 +1,438 @@
+@import url("https://fonts.googleapis.com/css2?family=Aleo:wght@700&family=Noto+Sans:wght@300;400;700&display=swap");
+
+/*-- scss:defaults --*/
+
+$primary: #00aeef !default;
+$secondary: #ffffff !default;
+$success: #004c45 !default;
+$warning: #ffb500 !default;
+$danger: #e2231a !default;
+$info: #00aeef !default;
+$light: #d7d2cb !default;
+$dark: #000000 !default;
+
+$body-bg: #ffffff !default;
+$body-color: #000000 !default;
+$link-color: #0047bb !default;
+$input-bg: #ffffff !default;
+$popover-bg: #ffffff !default;
+
+$font-family-sans-serif: "Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !default;
+$font-family-monospace: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, monospace !default;
+$headings-font-family: $font-family-sans-serif !default;
+$headings-font-weight: 400 !default;
+
+$font-size-root: 17px !default;
+$h1-font-size: 3rem !default;
+$h2-font-size: 2rem !default;
+$h3-font-size: 1.4rem !default;
+$h4-font-size: 1.1rem !default;
+
+$navbar-bg: $primary !default;
+$navbar-fg: #000000 !default;
+$navbar-hl: #0047bb !default;
+
+$sidebar-bg: #ffffff !default;
+$sidebar-fg: #000000 !default;
+$sidebar-hl: #0047bb !default;
+
+$footer-bg: #d7d2cb !default;
+$footer-fg: #000000 !default;
+
+$toc-color: #6e6968 !default;
+$toc-active-border: $primary !default;
+$toc-inactive-border: #bebab6 !default;
+
+$code-block-border-left: $primary !default;
+$code-block-border-left-style: solid !default;
+$code-block-border-left-size: 4px !default;
+$code-block-padding-left: 0.9rem !default;
+$code-block-bg: mix($primary, #ffffff, 9%) !default;
+$code-block-bg-padding: 0.9rem !default;
+
+$callout-border-width: 5px !default;
+$callout-color-note: $primary !default;
+$callout-color-tip: $success !default;
+$callout-color-caution: #ff8200 !default;
+$callout-color-warning: $warning !default;
+$callout-color-important: #0047bb !default;
+
+/*-- scss:rules --*/
+
+body {
+  letter-spacing: 0;
+}
+
+a {
+  text-underline-offset: 0.14em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: -0.02em;
+}
+
+.navbar {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.navbar .nav-link {
+  font-weight: 700;
+}
+
+.sidebar-logo {
+  max-width: 108px;
+  height: auto;
+  margin: 0.15rem auto 0.75rem;
+  opacity: 0.92;
+}
+
+.sidebar nav[role="doc-toc"] {
+  font-size: 0.95rem;
+}
+
+.sidebar-item .active,
+#TOC .active {
+  font-weight: 700;
+}
+
+.page-columns.page-full {
+  gap: 2rem;
+}
+
+.quarto-title-block .quarto-title-banner {
+  background: linear-gradient(135deg, #00aeef 0%, #b3e7fa 100%);
+  color: #000000;
+}
+
+.quarto-title-block .title {
+  font-weight: 300;
+}
+
+.quarto-title-block .subtitle,
+.quarto-title-meta {
+  color: #000000;
+}
+
+.hero-unicef {
+  background: linear-gradient(135deg, #00aeef 0%, #b3e7fa 100%);
+  color: #000000;
+  padding: clamp(2rem, 4vw, 4rem);
+  margin: 1.25rem 0 2rem;
+  border-radius: 8px;
+}
+
+.hero-unicef h1,
+.hero-unicef h2,
+.hero-unicef p {
+  max-width: 52rem;
+}
+
+.hero-kicker {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.lede {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #000000;
+  max-width: 46rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1.25rem;
+}
+
+.unicef-card-grid,
+.metric-grid,
+.story-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.unicef-card-grid,
+.story-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin: 1.5rem 0 2rem;
+}
+
+.metric-grid {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  margin: 1.25rem 0 2rem;
+}
+
+.unicef-card,
+.metric-card,
+.story-card {
+  background: #ffffff;
+  border: 1px solid #bebab6;
+  border-top: 6px solid #00aeef;
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.unicef-card h3,
+.story-card h3 {
+  margin-top: 0;
+}
+
+.metric-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0.35rem;
+}
+
+.metric-label {
+  color: #6e6968;
+  font-size: 0.95rem;
+}
+
+.statement-band {
+  background: #00aeef;
+  color: #000000;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.statement-band p:last-child {
+  margin-bottom: 0;
+}
+
+.article-meta {
+  color: #6e6968;
+  font-size: 0.92rem;
+  margin-bottom: 1.5rem;
+}
+
+.pull-quote {
+  font-family: "Aleo", Georgia, serif;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  border-left: 5px solid #00aeef;
+  padding-left: 1rem;
+  margin: 2rem 0;
+}
+
+.cta-banner {
+  background: #d7d2cb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+table {
+  border-color: #bebab6;
+}
+
+thead,
+thead th {
+  background: #00aeef;
+  color: #000000;
+}
+
+code:not(.sourceCode),
+.sourceCode {
+  border-radius: 6px;
+}
+
+.callout {
+  border-radius: 8px;
+}
+
+.page-footer {
+  font-size: 0.95rem;
+}
+
+.quarto-grid-item.card,
+.listing-default .quarto-post {
+  border-color: #bebab6;
+  box-shadow: none;
+}
+
+.listing-default .quarto-post {
+  display: grid;
+  grid-template-columns: 6.75rem minmax(0, 1fr) 17rem;
+  gap: 1.5rem;
+  align-items: start;
+  padding: 1.5rem 0;
+  border-top: 1px solid #d7d2cb;
+}
+
+.listing-default .quarto-post:first-child {
+  margin-top: 0.25rem;
+}
+
+.listing-default .quarto-post .metadata {
+  grid-column: 1;
+  padding-top: 0.15rem;
+}
+
+.listing-default .quarto-post .metadata a {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  color: #6e6968;
+  text-decoration: none;
+}
+
+.listing-default .quarto-post .listing-date {
+  color: #000000;
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.listing-default .quarto-post .listing-reading-time {
+  color: #6e6968;
+  font-size: 0.88rem;
+  line-height: 1.2;
+}
+
+.listing-default .quarto-post .body {
+  grid-column: 2;
+  min-width: 0;
+}
+
+.quarto-grid-item.card {
+  border-top: 6px solid #00aeef;
+  border-radius: 8px;
+}
+
+.quarto-grid-item .card-title,
+.listing-default .listing-title {
+  letter-spacing: -0.01em;
+}
+
+.listing-default .listing-title {
+  margin: 0 0 0.65rem;
+  font-size: clamp(1.5rem, 2vw, 1.95rem);
+  font-weight: 400;
+  line-height: 1.08;
+}
+
+.listing-default .listing-title a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.listing-default .listing-title a:hover {
+  color: #0047bb;
+}
+
+.listing-default .listing-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0 0 0.9rem;
+}
+
+.listing-default .listing-category {
+  border: 1px solid #d7d2cb;
+  border-radius: 999px;
+  color: #6e6968;
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  padding: 0.28rem 0.5rem;
+  text-transform: uppercase;
+}
+
+.listing-default .listing-description {
+  max-width: 36rem;
+}
+
+.listing-default .listing-description a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.listing-default .listing-description p {
+  color: #1a1c1e;
+  font-size: 1.02rem;
+  line-height: 1.65;
+  margin-bottom: 0;
+}
+
+.quarto-grid-item img {
+  object-fit: cover;
+}
+
+.listing-default .thumbnail {
+  grid-column: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16 / 9;
+  background: #ffffff;
+  border: 1px solid #bebab6;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.listing-default .thumbnail a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.listing-default .thumbnail img {
+  width: 100%;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: center;
+  background: #ffffff;
+}
+
+@media (max-width: 991.98px) {
+  .listing-default .quarto-post {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+
+  .listing-default .quarto-post .metadata,
+  .listing-default .quarto-post .body,
+  .listing-default .thumbnail {
+    grid-column: 1;
+  }
+
+  .listing-default .quarto-post .metadata {
+    order: 1;
+  }
+
+  .listing-default .quarto-post .body {
+    order: 2;
+  }
+
+  .listing-default .thumbnail {
+    order: 3;
+    max-width: 24rem;
+  }
+
+  .hero-unicef {
+    padding: 1.5rem;
+    border-radius: 0;
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+
+  .pull-quote {
+    font-size: 1.2rem;
+  }
+}

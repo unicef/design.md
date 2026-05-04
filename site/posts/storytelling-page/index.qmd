@@ -1,0 +1,109 @@
+---
+title: "Designing a UNICEF Storytelling Page in Quarto"
+subtitle: "A sample post for reports, guidance, and narrative publishing"
+description: "A sample Quarto post aligned to the UNICEF design variant for content-rich websites."
+author: "UNICEF Editorial Demo"
+date: 2026-04-29
+categories: [storytelling, publishing, quarto]
+image: thumbnail-storytelling.svg
+image-alt: "A simplified UNICEF-style storytelling thumbnail with a cyan header and bold content blocks."
+---
+
+<p class="article-meta">Sample post • Quarto website demo • Updated 2026-04-29</p>
+
+<p class="lede">Quarto is a strong fit for UNICEF-style publishing because it supports long-form reading, structured navigation, analytical content, and reproducible publication workflows without forcing the site into a generic documentation or SaaS dashboard aesthetic.</p>
+
+## Why This Format Works
+
+The UNICEF brand book emphasizes clarity, dignity, consistency, and strong communication through typography, photography, and disciplined use of color. Quarto websites naturally support those goals when the site is treated as an editorial system rather than a technical scaffold.
+
+::: {.callout-important title="Core principle"}
+Use UNICEF Blue as a strong institutional signal, but let the page remain primarily about the content, evidence, and human story.
+:::
+
+## Reading Rhythm
+
+Long-form UNICEF content should feel calm, readable, and direct. This means:
+
+- large, lightly weighted titles
+- generous paragraph spacing
+- restrained callouts
+- crisp tables and charts
+- a narrow enough line length to support sustained reading
+
+::: {.pull-quote}
+Whoever she is. Wherever he lives. Every child deserves a childhood, a future, and a fair chance.
+:::
+
+## Quarto Features to Lean On
+
+Quarto provides several built-in capabilities that map well to UNICEF publishing needs.
+
+| Feature | Why it matters | Recommended use |
+|---|---|---|
+| Navbar | Gives global orientation | Major site sections and search |
+| Sidebar | Supports chaptered or sectioned content | Reports, guidance, and multi-page series |
+| Reader mode | Reduces distraction | Long-form reading and policy pages |
+| Page navigation | Supports sequential reading | Chapters and structured briefs |
+| Callouts | Clarifies emphasis | Notes, tips, cautions, warnings, important guidance |
+| Code copy | Helps technical readers | Research and reproducibility pages |
+
+## Sample Callouts
+
+::: {.callout-note title="Note"}
+Use note callouts for neutral editorial clarification.
+:::
+
+::: {.callout-tip title="Tip"}
+Use tip callouts for practical implementation guidance or reproducibility hints.
+:::
+
+::: {.callout-caution title="Caution"}
+Use caution callouts when a workflow has a meaningful edge case, tradeoff, or operational dependency.
+:::
+
+::: {.callout-warning title="Warning"}
+Use warning callouts when the user should pause before making a potentially disruptive choice.
+:::
+
+## Code and Configuration
+
+For Quarto websites, the site shell should stay simple and transparent. A minimal `_quarto.yml` plus a small set of brand and theme files is often enough.
+
+```yaml
+project:
+  type: website
+
+website:
+  title: UNICEF
+  reader-mode: true
+  page-navigation: true
+  navbar:
+    background: primary
+    search: true
+
+format:
+  html:
+    theme:
+      light: [cosmo, brand, custom.scss]
+      dark: [slate, brand, custom-dark.scss]
+```
+
+## Editorial Use Cases
+
+This pattern works especially well for:
+
+- annual reports
+- country or regional briefing sites
+- policy guidance
+- research microsites
+- documentation for data or program tools
+- campaign explainers with supporting evidence
+
+## Closing Pattern
+
+<div class="cta-banner">
+  <h3>What to do next</h3>
+  <p>Use this page structure for post templates, then swap in approved photography, production copy, charts, and figure captions from the actual publication workflow.</p>
+  <p><a class="btn btn-primary" href="../../stories.qmd">View all stories</a></p>
+</div>

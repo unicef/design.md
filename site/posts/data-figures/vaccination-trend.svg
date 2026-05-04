@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Illustrative vaccination trend chart</title>
+  <desc id="desc">A simple line chart rising over three years, using UNICEF blue and a clean white background.</desc>
+  <rect width="960" height="540" fill="#FFFFFF"/>
+  <text x="60" y="60" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#000000">Illustrative coverage trend</text>
+  <line x1="100" y1="430" x2="860" y2="430" stroke="#BEBAB6" stroke-width="2"/>
+  <line x1="100" y1="120" x2="100" y2="430" stroke="#BEBAB6" stroke-width="2"/>
+  <line x1="100" y1="350" x2="860" y2="350" stroke="#E6EEF2" stroke-width="2"/>
+  <line x1="100" y1="270" x2="860" y2="270" stroke="#E6EEF2" stroke-width="2"/>
+  <line x1="100" y1="190" x2="860" y2="190" stroke="#E6EEF2" stroke-width="2"/>
+  <polyline fill="none" stroke="#00AEEF" stroke-width="8" points="180,340 400,290 620,215 820,165"/>
+  <circle cx="180" cy="340" r="9" fill="#00AEEF"/>
+  <circle cx="400" cy="290" r="9" fill="#00AEEF"/>
+  <circle cx="620" cy="215" r="9" fill="#00AEEF"/>
+  <circle cx="820" cy="165" r="9" fill="#00AEEF"/>
+  <text x="160" y="470" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#000000">2022</text>
+  <text x="380" y="470" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#000000">2023</text>
+  <text x="600" y="470" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#000000">2024</text>
+  <text x="800" y="470" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#000000">2025</text>
+  <text x="36" y="435" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#6E6968">0</text>
+  <text x="26" y="355" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#6E6968">25</text>
+  <text x="26" y="275" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#6E6968">50</text>
+  <text x="26" y="195" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#6E6968">75</text>
+</svg>

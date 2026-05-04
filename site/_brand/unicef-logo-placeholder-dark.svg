@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 96" role="img" aria-labelledby="title desc">
+  <title id="title">UNICEF demo placeholder logo dark</title>
+  <desc id="desc">A dark logo placeholder for local Quarto demos. Replace with approved UNICEF logo assets before publishing.</desc>
+  <rect width="320" height="96" fill="#101418"/>
+  <rect x="18" y="18" width="284" height="60" rx="6" ry="6" fill="none" stroke="#00AEEF" stroke-opacity="0.8"/>
+  <text x="28" y="46" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#FFFFFF">UNICEF DEMO</text>
+  <text x="28" y="67" font-family="Arial, Helvetica, sans-serif" font-size="12" letter-spacing="1" fill="#73C9FF">REPLACE WITH APPROVED LOGO</text>
+</svg>

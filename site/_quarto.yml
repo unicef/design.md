@@ -1,0 +1,75 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - index.qmd
+    - stories.qmd
+    - posts/**/index.qmd
+    - 404.qmd
+
+brand:
+  light: _brand-light.yml
+  dark: _brand-dark.yml
+
+website:
+  title: UNICEF
+  description: A UNICEF-aligned Quarto website starter with stories, reports, and publishing patterns.
+  reader-mode: true
+  page-navigation: true
+  back-to-top-navigation: true
+  navbar:
+    title: false
+    background: primary
+    search: true
+    left:
+      - href: index.qmd
+        text: Home
+      - href: stories.qmd
+        text: Stories
+      - href: posts/storytelling-page/index.qmd
+        text: Storytelling Post
+      - href: posts/data-figures/index.qmd
+        text: Data Post
+  sidebar:
+    style: docked
+    background: light
+    border: false
+    collapse-level: 2
+    contents:
+      - href: index.qmd
+        text: Overview
+      - href: stories.qmd
+        text: Listing Page
+      - href: posts/storytelling-page/index.qmd
+        text: Storytelling Post
+      - href: posts/data-figures/index.qmd
+        text: Data and Figures Post
+  page-footer:
+    left: Draft UNICEF-aligned Quarto starter
+    center: for every child,
+    right:
+      - text: UNICEF.org
+        href: https://www.unicef.org
+
+format:
+  html:
+    theme:
+      light:
+        - cosmo
+        - brand
+        - custom.scss
+      dark:
+        - slate
+        - brand
+        - custom-dark.scss
+    toc: true
+    toc-depth: 3
+    anchor-sections: true
+    smooth-scroll: true
+    code-copy: true
+    link-external-newwindow: true
+    respect-user-color-scheme: true
+    mainfont: Noto Sans
+    fontsize: 1.05em
+    linestretch: 1.7
+    max-width: 1280px

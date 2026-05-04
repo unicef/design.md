@@ -1,0 +1,69 @@
+meta:
+  name: UNICEF Quarto Demo Brand
+  link: https://www.unicef.org
+
+color:
+  palette:
+    unicef-blue: "#00AEEF"
+    action-blue: "#0047BB"
+    white: "#FFFFFF"
+    black: "#000000"
+    warm-neutral: "#D7D2CB"
+    border-neutral: "#BEBAB6"
+    teal: "#004C45"
+    orange: "#FF8200"
+    gold: "#FFB500"
+    red: "#E2231A"
+    soft-cyan: "#B3E7FA"
+  foreground: black
+  background: white
+  primary: unicef-blue
+  secondary: border-neutral
+  tertiary: soft-cyan
+  success: teal
+  info: action-blue
+  warning: gold
+  danger: red
+  light: white
+  dark: black
+
+logo:
+  images:
+    navbar-light:
+      path: _brand/unicef-logo-cyan-horizontal.png
+      alt: UNICEF logo with tagline in cyan for light backgrounds.
+  small: navbar-light
+  medium: navbar-light
+
+typography:
+  fonts:
+    - family: Noto Sans
+      source: google
+    - family: Aleo
+      source: google
+  base:
+    family: Noto Sans
+    size: 1rem
+    line-height: 1.7
+    weight: 400
+  headings:
+    family: Noto Sans
+    weight: 400
+    line-height: 1.2
+    color: black
+  link:
+    color: action-blue
+    decoration: underline
+  monospace-inline:
+    color: black
+    background-color: soft-cyan
+  monospace-block:
+    background-color: warm-neutral
+
+defaults:
+  bootstrap:
+    defaults:
+      navbar-bg: "#00AEEF"
+      navbar-fg: "#000000"
+      sidebar-hl: "#0047BB"
+      link-decoration: underline

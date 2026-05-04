@@ -1,0 +1,93 @@
+---
+title: "For every child, a fair chance"
+subtitle: "A Quarto starter aligned with the UNICEF Brand Book 4.0"
+toc: false
+---
+
+::: {.hero-unicef}
+<div class="hero-kicker">UNICEF Quarto Demo</div>
+
+## A publication-first website starter
+
+<p class="lede">This sample homepage shows how the UNICEF Quarto design variant can shape a light, readable, and strongly branded website for reports, storytelling, guidance, and advocacy content.</p>
+
+<div class="hero-actions">
+
+[Read the sample post](posts/storytelling-page/index.qmd){.btn .btn-primary}
+[Visit UNICEF.org](https://www.unicef.org){.btn .btn-outline-dark target="_blank" rel="noopener noreferrer"}
+
+</div>
+:::
+
+## What This Demo Includes
+
+<div class="unicef-card-grid">
+  <div class="unicef-card">
+    <h3>Publication rhythm</h3>
+    <p>Large, calm headings, generous line spacing, and narrow reading measures suited to reports, briefs, and story pages.</p>
+  </div>
+  <div class="unicef-card">
+    <h3>Quarto navigation</h3>
+    <p>A top navbar, docked sidebar, search, reader mode, back-to-top navigation, and page navigation across content.</p>
+  </div>
+  <div class="unicef-card">
+    <h3>Structured content</h3>
+    <p>Callouts, tables, code blocks, and footer areas styled to feel like part of the same UNICEF editorial system.</p>
+  </div>
+</div>
+
+## Design Principles
+
+- Keep the site light-first and content-led.
+- Use UNICEF Blue as the strongest brand signal, not as decoration on every element.
+- Favor readability over novelty.
+- Let photography lead major landing and campaign moments, while analytical pages stay quieter.
+- Preserve a credible, global-public-interest tone.
+
+## Sample Metrics
+
+<div class="metric-grid">
+  <div class="metric-card">
+    <span class="metric-number">190+</span>
+    <span class="metric-label">countries and territories referenced by the brand narrative</span>
+  </div>
+  <div class="metric-card">
+    <span class="metric-number">1</span>
+    <span class="metric-label">dominant brand color used to anchor recognition</span>
+  </div>
+  <div class="metric-card">
+    <span class="metric-number">5</span>
+    <span class="metric-label">sample pages included in this starter site</span>
+  </div>
+</div>
+
+::: {.statement-band}
+**for every child,**
+
+This starter is designed to support storytelling, policy communication, research publication, and structured reporting without losing the tone of the UNICEF brand.
+:::
+
+## Entry Points
+
+<div class="story-grid">
+  <div class="story-card">
+    <h3><a href="stories.qmd">Stories and Reports</a></h3>
+    <p>A Quarto listing page that automatically pulls in post metadata, categories, dates, and reading-time support from the `posts/` folder.</p>
+  </div>
+  <div class="story-card">
+    <h3><a href="posts/storytelling-page/index.qmd">Storytelling Post</a></h3>
+    <p>A long-form sample post demonstrating TOC behavior, callouts, tables, code blocks, and narrative pacing.</p>
+  </div>
+  <div class="story-card">
+    <h3><a href="posts/data-figures/index.qmd">Data and Figures Post</a></h3>
+    <p>A second sample post showing figure captions, chart placeholders, and report-style analytical structure.</p>
+  </div>
+  <div class="story-card">
+    <h3><a href="https://www.unicef.org" target="_blank" rel="noopener noreferrer">UNICEF.org</a></h3>
+    <p>An external reference point for live UNICEF publishing patterns and current institutional communication.</p>
+  </div>
+</div>
+
+::: {.callout-note title="Implementation note"}
+This starter intentionally uses a Quarto-native structure. The most important styling is carried by `custom.scss`, while navigation and document behavior are controlled in `_quarto.yml`.
+:::
