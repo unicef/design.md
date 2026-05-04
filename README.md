@@ -9,6 +9,46 @@ This repository contains a draft `DESIGN.md` derived from `files/Brand Book 4.0.
 
 `DESIGN.md` is a structured, agent-readable design system document. This draft translates UNICEF Brand Book 4.0 into that format so coding agents can generate interfaces and communication assets that stay closer to UNICEF's visual identity.
 
+## How To Use
+
+If you want to apply this UNICEF design system in another project, you usually only need to copy one of the root `DESIGN*.md` files into that project's root directory.
+
+Choose one:
+
+- `DESIGN.md`: best default choice for general UNICEF-aligned work
+- `DESIGN.web-app.md`: use for product UI, app shells, forms, and dashboard-style work
+- `DESIGN.quarto.md`: use for Quarto sites, reports, listings, and publication-style pages
+
+Typical workflow in another project:
+
+1. Copy the variant you want into your target project.
+2. Rename it to `DESIGN.md` in that project root.
+3. Ask your coding agent to use `DESIGN.md` when generating or restyling UI.
+
+You usually do **not** need to copy this repository's `site/` directory unless you specifically want the Quarto example implementation.
+
+Example prompts for another project:
+
+```text
+Use the DESIGN.md in this repo as the visual source of truth and restyle the homepage to match UNICEF's editorial, child-centered design language.
+```
+
+```text
+Build a reporting dashboard that follows the local DESIGN.md. Keep UNICEF Blue as the primary brand signal, use restrained accents, and favor clear data panels over decorative UI.
+```
+
+```text
+Create a Quarto landing page and article template based on DESIGN.md. Preserve strong reading rhythm, generous spacing, calm typography, and publication-style hierarchy.
+```
+
+```text
+Refactor the existing components to align with DESIGN.md without changing the underlying app behavior. Focus on typography, spacing, color roles, cards, navigation, and content density.
+```
+
+If you want more background on the format itself, see the Stitch overview:
+
+- `https://stitch.withgoogle.com/docs/design-md/overview/`
+
 ## Local Dependencies
 
 For local work, there are two dependency paths:
