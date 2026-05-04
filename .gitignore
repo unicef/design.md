@@ -3,6 +3,9 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+# macOS
+.DS_Store
+
 # C extensions
 *.so
 
@@ -16,6 +19,7 @@ eggs/
 .eggs/
 lib/
 lib64/
+node_modules/
 parts/
 sdist/
 var/
@@ -164,16 +168,11 @@ venv.bak/
 # Rope project settings
 .ropeproject
 
-# mkdocs documentation
-/site
+# Site build artifacts
 /.quarto/
 /_site/
 /site/.quarto/
 /site/_site/
-/_site/
-/quarto/.quarto/
-/quarto/_site/
-/_site/
 
 # mypy
 .mypy_cache/
@@ -226,3 +225,4 @@ __marimo__/
 .streamlit/secrets.toml
 
 /.quarto/
+/.playwright-cli/
