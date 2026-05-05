@@ -272,10 +272,12 @@ When a design decision is not explicitly covered by tokens, choose the option th
 
 The core UNICEF palette is intentionally tight. UNICEF Blue is the brand's primary identifier and should appear in every communication as a dominant or clearly present color. White and black support it as neutrals, while a restrained set of accent colors is available for emphasis, campaign variety, and data visualization.
 
-- **Primary (`#00AEEF`)**: UNICEF Blue. The defining brand color for logos, bars, panels, calls to action, links, and the most recognizable background fields.
+- **Primary (`#00AEEF`)**: UNICEF Blue. The defining brand color for logos, bars, panels, and the most recognizable background fields.
 - **Secondary (`#FFFFFF`)**: White. The default page surface and the clearest pairing for UNICEF Blue and photography.
 - **Tertiary (`#000000`)**: Black. Used for core body text and sober expressions, but it should not dominate unless the communication needs gravity or emergency framing.
 - **Neutral (`#D7D2CB`)**: Warm light neutral for supporting surfaces, publication interiors, and softer structured layouts.
+
+In digital products, treat UNICEF Blue primarily as the institutional brand signal. For productivity and enterprise interfaces, a darker blue may be more suitable for primary actions and interactive controls because it preserves contrast while leaving bright UNICEF Blue available for header and brand emphasis.
 
 Supporting colors should be used with discipline.
 
@@ -283,6 +285,12 @@ Supporting colors should be used with discipline.
 - **Accent orange (`#FF7100`)**, **bright orange (`#FF8200`)**, and **gold (`#FFB500`)** add contrast in charts, highlights, and campaign systems.
 - **Emergency red (`#E2231A`)** is reserved for urgent emergency communication and should always be paired with UNICEF Blue to preserve brand association.
 - **Primary tints** such as `#40C2F3`, `#6DCFF6`, and `#B3E7FA` can be used for data visualization and inside publication pages.
+
+For status semantics, use supporting colors intentionally rather than decoratively.
+
+- Use teal or green for success and positive completion states.
+- Use orange and gold for warnings, cautions, and attention states.
+- Use red only for error, danger, or destructive actions.
 
 Color handling rules are strict.
 
@@ -300,6 +308,8 @@ Typography must be accessible, multilingual, and easy to deploy globally. Noto S
 - **Labels and emphasis**: Noto Sans Bold for concise emphasis, metadata, key statistics, and UI labels.
 - **Serif emphasis**: Aleo may be used sparingly where a serif note helps highlight a word or phrase, especially in Roman scripts. It should never displace Noto Sans as the dominant voice.
 - **Brand statement**: The phrase `for every child,` is set in Noto Sans Regular and the keyword that follows is set in Noto Sans Bold, both in lowercase and at the same size.
+
+In digital interfaces, headings should generally remain dark rather than bright cyan so they do not read like links. In bandwidth-constrained environments, efficient font delivery and sensible system-font fallbacks are appropriate as long as the overall typographic tone stays aligned with Noto Sans.
 
 Handwritten typography is an exception style, not a default style. If used, it must be large, legible, high-contrast, and emotionally justified. Do not use handwritten fonts for body text, dense informational text, or all-caps settings.
 
@@ -344,6 +354,7 @@ For digital interpretation:
 UNICEF's brand book is heavier on communications systems than product UI, so component styling should borrow from publication, social, web, and video guidance rather than from consumer app conventions.
 
 - **Primary actions** should use UNICEF Blue with white text and a flat rectangular silhouette.
+- **Primary actions** in brand-forward communications can use UNICEF Blue, but productivity interfaces may prefer darker blue actions for stronger contrast and clearer distinction between brand chrome and interaction.
 - **Secondary actions** should use white surfaces with black text and clear outlining in implementation, keeping the visual language quiet next to the primary action.
 - **Cards and fact panels** should be flat, image-friendly, and editorial. Use white or pale tinted surfaces for structured information.
 - **Statistics and data callouts** may use UNICEF Blue or a restrained accent color, but the chart system should remain legible and ordered.
@@ -361,12 +372,33 @@ When inventing a new component family, make it feel like a communication asset f
 - Do keep the brand statement in lowercase with regular-plus-bold contrast.
 - Do choose Noto Sans as the default across platforms and languages.
 - Do use accent colors sparingly and purposefully.
+- Do pair status colors with text, icons, or other cues so meaning does not depend on color alone.
 - Don't create a separate sub-brand look and feel for campaigns or teams.
 - Don't distort, recolor, outline, reassemble, or crowd the logo.
 - Don't place the logo over a child's face or over low-contrast backgrounds.
 - Don't let black dominate unless the message genuinely needs a sombre tone.
 - Don't use synthetic or AI-generated imagery in place of real photography.
 - Don't use decorative handwritten styles for dense information or body text.
+
+## Content & Labeling
+
+Digital UNICEF work should use clear, direct, and consistent language.
+
+- Use sentence case for labels, buttons, and interface text.
+- Keep labels short, precise, and univocal.
+- Prefer explicit labels like `Save`, `Edit`, `Delete`, `Continue`, and `Upload` over vague verbs such as `Submit` when a more precise action is available.
+- Avoid unexplained acronyms in labels. If one is necessary, expand it the first time.
+- Avoid link text such as `click here`; link text should describe the destination or action.
+- Prefer short paragraphs, bullet lists, and structurally clear headings for on-screen reading.
+
+## Status & Semantics
+
+Use color semantically, not decoratively.
+
+- Success states should feel calm and affirmative.
+- Warning states should ask for attention without creating unnecessary alarm.
+- Danger states should indicate blockers, destructive actions, or severe errors.
+- Color should reinforce meaning, but the message should still be understandable without the color itself.
 
 ## Logo
 

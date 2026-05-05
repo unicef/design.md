@@ -6,6 +6,7 @@ listing:
   contents: posts
   type: default
   sort: "date desc"
+  date-format: long
   fields: [image, date, title, description, categories, reading-time]
   categories: true
   sort-ui: [date, title]

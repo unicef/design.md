@@ -4,10 +4,17 @@ This repository contains a draft `DESIGN.md` derived from `files/Brand Book 4.0.
 
 - Spec: `https://github.com/google-labs-code/design.md`
 - Source PDF: `files/Brand Book 4.0.pdf`
+- UNICEF design-system guidelines: `https://unicef.github.io/design-system/design-guidelines.html`
 
 ## What This Is
 
 `DESIGN.md` is a structured, agent-readable design system document. This draft translates UNICEF Brand Book 4.0 into that format so coding agents can generate interfaces and communication assets that stay closer to UNICEF's visual identity.
+
+In addition to the brand book, this repository also references the UNICEF design-system guidelines for productivity and enterprise web applications:
+
+- `https://unicef.github.io/design-system/design-guidelines.html`
+
+Those guidelines are especially useful for refining the app-oriented and Quarto-oriented variants with stronger rules for labeling, forms, tables, alerts, accessibility, and action-color semantics.
 
 ## How To Use
 

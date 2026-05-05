@@ -49,6 +49,33 @@ a {
   color: #f5f7fa;
 }
 
+.btn-primary {
+  background-color: #73c9ff;
+  border-color: #73c9ff;
+  color: #101418;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: #4fb7f7;
+  border-color: #4fb7f7;
+  color: #101418;
+}
+
+.btn-outline-dark {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.btn-outline-dark:hover,
+.btn-outline-dark:focus,
+.btn-outline-dark:active {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #101418;
+}
+
 .sidebar-logo {
   max-width: 112px;
   height: auto;

@@ -291,7 +291,7 @@ Accent colors should support meaning.
 - **Orange** and **gold** for emphasis, warnings, or highlight blocks.
 - **Danger red** for critical notices only.
 
-Keep pages clean and readable. Avoid multicolor clutter in article flows.
+Keep pages clean and readable. Avoid multicolor clutter in article flows. Headings should generally remain dark rather than bright cyan so they are not confused with links, while the darker blue stays reserved for real interaction and navigation emphasis.
 
 ## Typography
 
@@ -349,6 +349,7 @@ This variant optimizes for publishing and information architecture.
 - Do use photography purposefully in hero moments and feature pages.
 - Do make tables, callouts, and charts feel like part of the same editorial system.
 - Do preserve strong color contrast for links and callouts.
+- Do write links and labels so users can understand them while scanning.
 - Don't style Quarto pages like a SaaS dashboard unless the content truly requires it.
 - Don't overload article pages with multiple accent colors or too many inline panels.
 - Don't let sidebars and TOCs dominate the reading column.
@@ -405,6 +406,26 @@ Articles should open with strong titles, concise dek copy, and enough breathing 
 - Use hero images sparingly but with conviction.
 - Preserve legibility when article cards include photography.
 
+## Writing for the Web
+
+Quarto pages should follow on-screen writing rules rather than print-document habits.
+
+- Use short paragraphs, ideally no more than a few lines on screen.
+- Start with the conclusion or most important point when possible.
+- Prefer bullet lists and numbered lists over comma-heavy prose.
+- Use bold sparingly to highlight key phrases.
+- Use headings to structure content so readers can scan quickly.
+- Avoid underlining non-link text.
+
+## Links & Labels
+
+Link and navigation text should describe what is behind the interaction.
+
+- Avoid `click here` style link text.
+- Prefer labels that describe the destination or action directly.
+- Keep labels in sentence case.
+- Avoid unexplained acronyms in navigation and UI labels.
+
 ## Code, Tables, and Callouts
 
 Quarto websites often include analytical or technical content. Even when the tone is editorial, structured content should feel fully supported.
@@ -413,6 +434,8 @@ Quarto websites often include analytical or technical content. Even when the ton
 - Tables should use strong headers and restrained striping or tinting.
 - Callouts should indicate meaning clearly: note, tip, caution, warning, important, and danger.
 - Use callouts to clarify, not to interrupt every section.
+
+In publishing contexts, alerts and callouts should be used only for genuinely high-importance content. Normal explanatory text should remain in the main article flow rather than being boxed by default.
 
 Quarto's built-in callout system maps cleanly to UNICEF content if used with discipline:
 
@@ -425,6 +448,8 @@ Quarto's built-in callout system maps cleanly to UNICEF content if used with dis
 
 Code copy buttons, code annotations, and figure/table cross-references should feel integrated into the same restrained editorial system.
 
+Numeric and date columns in tables should align consistently, with right alignment used where it improves comparison.
+
 ## Data Visualization
 
 Use the UNICEF chart language in a web-publishing context.
@@ -433,6 +458,16 @@ Use the UNICEF chart language in a web-publishing context.
 - Teal, orange, and gold can distinguish additional series.
 - Keep labels, captions, and chart notes plain and direct.
 - Treat maps, charts, and figures as editorial evidence.
+
+Status-like colors in explanatory graphics should stay semantic: teal for success, orange or gold for warning, and red for severe error or danger.
+
+## Dates & Numbers
+
+Publishing and reporting pages should use unambiguous date formats.
+
+- Prefer `3 February 2026` or `03-Feb-2026`.
+- Avoid ambiguous numeric dates like `03/08/2026`.
+- Keep number and currency formatting consistent across a site or publication series.
 
 ## Accessibility
 
@@ -443,6 +478,7 @@ Quarto sites should be accessible by default.
 - Ensure callouts and tables remain readable on small screens.
 - Do not depend on color alone for structure or warning states.
 - Support keyboard navigation and clear heading hierarchy.
+- Provide concise and descriptive `alt` text for meaningful images and figures.
 
 If dark mode is offered, treat it as a second fully designed experience rather than a token inversion. Quarto supports paired light and dark themes, but UNICEF publishing should remain light-first unless there is a strong product reason to offer both.
 
@@ -456,6 +492,14 @@ Quarto HTML output is Bootstrap 5-based, so this variant should translate natura
 - Preserve a clear distinction between content width for reading pages and wider layouts for listings, dashboards, or figure-heavy pages.
 
 This variant is a better fit for `theme` plus custom SCSS than for heavily bespoke CSS that fights Quarto's layout model.
+
+## Icons
+
+Icons should generally support visible labels rather than replace them.
+
+- In navigation and utility controls, prefer icons plus text where space allows.
+- Use icon-only controls only for very familiar actions or very constrained spaces.
+- Tooltips can support icon-only controls, but should not be the primary carrier of meaning.
 
 ## Deployment Details
 

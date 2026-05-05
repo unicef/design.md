@@ -9,7 +9,7 @@ image: thumbnail-data.svg
 image-alt: "A simplified UNICEF-style data thumbnail with bars, a trend line, and UNICEF Blue accents."
 ---
 
-<p class="article-meta">Sample post • Data and figures • Updated 2026-04-30</p>
+<p class="article-meta">Sample post • Data and figures • Updated 30 April 2026</p>
 
 <p class="lede">Analytical UNICEF content often needs to combine narrative clarity with charts, figures, captions, and methodological transparency. This sample page shows one way to do that in a Quarto-native layout.</p>
 

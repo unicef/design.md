@@ -9,7 +9,7 @@ image: thumbnail-storytelling.svg
 image-alt: "A simplified UNICEF-style storytelling thumbnail with a cyan header and bold content blocks."
 ---
 
-<p class="article-meta">Sample post • Quarto website demo • Updated 2026-04-29</p>
+<p class="article-meta">Sample post • Quarto website demo • Updated 29 April 2026</p>
 
 <p class="lede">Quarto is a strong fit for UNICEF-style publishing because it supports long-form reading, structured navigation, analytical content, and reproducible publication workflows without forcing the site into a generic documentation or SaaS dashboard aesthetic.</p>
 
@@ -48,22 +48,17 @@ Quarto provides several built-in capabilities that map well to UNICEF publishing
 | Callouts | Clarifies emphasis | Notes, tips, cautions, warnings, important guidance |
 | Code copy | Helps technical readers | Research and reproducibility pages |
 
-## Sample Callouts
+## Callout Semantics
 
-::: {.callout-note title="Note"}
-Use note callouts for neutral editorial clarification.
-:::
+Use callouts sparingly and only when the content genuinely deserves special emphasis.
 
-::: {.callout-tip title="Tip"}
-Use tip callouts for practical implementation guidance or reproducibility hints.
-:::
+- **Note** for neutral clarification
+- **Tip** for useful implementation advice
+- **Caution** for practical edge cases or tradeoffs
+- **Warning** for stronger disruption or risk
 
-::: {.callout-caution title="Caution"}
-Use caution callouts when a workflow has a meaningful edge case, tradeoff, or operational dependency.
-:::
-
-::: {.callout-warning title="Warning"}
-Use warning callouts when the user should pause before making a potentially disruptive choice.
+::: {.callout-note title="Editorial note"}
+In a UNICEF-style publication page, most explanatory text should remain in the main article flow. Callouts should support scanning, not replace the article structure.
 :::
 
 ## Code and Configuration

@@ -87,6 +87,33 @@ h4 {
   font-weight: 700;
 }
 
+.btn-primary {
+  background-color: #0047bb;
+  border-color: #0047bb;
+  color: #ffffff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: #003a96;
+  border-color: #003a96;
+  color: #ffffff;
+}
+
+.btn-outline-dark {
+  color: #000000;
+  border-color: #000000;
+}
+
+.btn-outline-dark:hover,
+.btn-outline-dark:focus,
+.btn-outline-dark:active {
+  background-color: #000000;
+  border-color: #000000;
+  color: #ffffff;
+}
+
 .sidebar-logo {
   max-width: 112px;
   height: auto;
@@ -155,6 +182,10 @@ h4 {
   gap: 0.75rem;
   flex-wrap: wrap;
   margin-top: 1.25rem;
+}
+
+.hero-actions .btn {
+  min-width: 12rem;
 }
 
 .unicef-card-grid,

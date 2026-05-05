@@ -247,7 +247,14 @@ Supporting colors are for status and segmentation, not for visual noise.
 - **Orange (`#FF7100`)** and **gold (`#FFB500`)**: Human attention, notices, data highlighting, and campaign accents.
 - **Danger (`#E2231A`)**: Emergencies, destructive actions, or urgent alerts.
 
-The interface should never feel rainbow-coded. Blue remains the center of gravity.
+The interface should never feel rainbow-coded. Blue remains the center of gravity. In enterprise and productivity applications, bright UNICEF Blue should mainly express institutional identity, while darker blue should carry the main action burden.
+
+Status colors should follow a simple traffic-light model.
+
+- Teal or green means success.
+- Orange and gold mean warning or caution.
+- Red means error, danger, or destructive action.
+- Color must never be the only cue for status.
 
 ## Typography
 
@@ -257,6 +264,8 @@ Noto Sans remains the primary voice. In web and app contexts it should work hard
 - Body text, form text, tables, and data labels use regular Noto Sans.
 - Navigation items, buttons, and compact labels use bold Noto Sans.
 - Aleo is reserved for the occasional pull quote or campaign emphasis, not for interface scaffolding.
+
+Headings should usually be rendered in dark ink rather than bright cyan so they do not compete with link styling. In low-bandwidth environments, efficient delivery or sensible `system-ui` fallback strategies are acceptable as long as the visual tone remains close to Noto Sans.
 
 Use a strong typographic hierarchy with fewer decorative jumps. App screens should be scannable in under a second.
 
@@ -297,6 +306,7 @@ This variant is intentionally more component-rich than the base file.
 - Tabs, filters, alerts, and toasts should be obvious at a glance.
 - Tables and stat panels should feel analytical and public-interest oriented rather than sales-dashboard driven.
 - Forms should be simple, readable, and globally translatable.
+- Icons should usually be paired with visible labels rather than standing alone.
 
 ## Do's and Don'ts
 
@@ -305,10 +315,26 @@ This variant is intentionally more component-rich than the base file.
 - Do design dashboards and forms with strong grouping and low clutter.
 - Do keep content and imagery respectful, concise, and credible.
 - Do let metrics and status blocks feel factual instead of gamified.
+- Do keep labels consistent across the whole product.
+- Do prefer explicit button verbs over generic action text.
 - Don't introduce playful consumer-app gradients, glass effects, or mascot styling.
 - Don't crowd screens with too many cards, panels, or parallel actions.
 - Don't hide the brand under monochrome utility styling.
 - Don't use more accent colors than the information architecture genuinely needs.
+- Don't use disabled buttons as the main way to explain missing form state.
+- Don't use bright cyan headings in ways that can be confused with links.
+
+## Content & Labeling
+
+UNICEF enterprise UI should be explicit, obvious, and easy to understand regardless of the user's technical confidence.
+
+- Use sentence case for labels, headings, and button text.
+- Keep labels short, precise, and consistent.
+- Avoid unnecessary acronyms. If an acronym is necessary, expand it the first time.
+- Prefer `Continue`, `Save`, `Delete`, `Upload`, and `Download` over vague alternatives when those labels describe the action more precisely.
+- Buttons perform actions, so button labels should contain verbs.
+- Avoid filler link text such as `click here`; links should describe the destination or action.
+- Use short paragraphs, bullets, and clear headings because users scan enterprise screens rather than read them linearly.
 
 ## Navigation
 
@@ -319,14 +345,51 @@ Navigation should be calm, prominent, and easy to scan.
 - Active states should use blue fills, blue rules, or high-contrast text changes rather than animated flourishes.
 - Search, global actions, and profile/help affordances should stay structurally consistent across screens.
 
+Icons in navigation should usually be accompanied by labels. If space is truly constrained, use a tooltip as a fallback rather than relying on unlabeled icons by default.
+
+## Buttons
+
+Use a small, consistent button vocabulary.
+
+- Primary buttons move the user forward in the normal flow.
+- Secondary buttons support less important actions such as cancel or going back.
+- Danger buttons are reserved for destructive actions such as delete.
+- Button order should move from lower-importance actions to the primary action.
+- Prefer an undo path or a confirmation dialog for destructive actions.
+- Avoid disabled buttons where possible; if an action is unavailable, explain why in surrounding text or field-level guidance.
+
 ## Forms
 
 Forms should feel trustworthy and low-friction.
 
 - Keep forms narrow where possible.
+- Order fields from more important to less important, and place optional fields later.
+- Group related fields together.
 - Use clear labels above fields or in stable positions.
+- Every form control should have a label except in rare obvious cases such as a standalone search box.
+- Match field width to expected content length where practical.
+- Right-align numerical and currency inputs to support scanning.
 - Treat validation and error states as direct, not conversational.
 - Destructive actions should be visually separate from primary completion actions.
+
+## Tables
+
+Tables should feel dense but readable.
+
+- Put the most important identifying information toward the left.
+- Keep actions at the far right.
+- Right-align numerical and date columns.
+- Use restrained row styling and let hierarchy come from alignment and typography rather than heavy decoration.
+
+## Status & Alerts
+
+Alerts and notifications should be rare and meaningful.
+
+- Success should confirm completion without being celebratory.
+- Warning should call for attention without blocking the user unnecessarily.
+- Danger should indicate blockers, errors, or destructive actions.
+- Pair status colors with clear text and, where helpful, icons.
+- Avoid overusing alerts; if everything stands out, nothing stands out.
 
 ## Data Visualization
 
@@ -336,6 +399,14 @@ For apps and dashboards, data design should borrow from the UNICEF publication s
 - Keep chart annotations crisp and human-readable.
 - Prefer bars, lines, maps, and simple comparison modules over novelty charts.
 - Let dashboards read like decision-support tools, not investor decks.
+
+## Dates & Numbers
+
+Prefer unambiguous date formatting in enterprise contexts.
+
+- Use formats such as `3 February 2026` or `03-Feb-2026`.
+- Avoid ambiguous numeric formats like `03/08/2026`.
+- Keep number and currency formatting consistent across the product.
 
 ## Responsive Behavior
 
@@ -362,6 +433,23 @@ Accessibility should be designed in from the start.
 - Use large enough text in nav, metrics, and mobile flows.
 - Avoid color-only signaling for status.
 - Support keyboard navigation, screen-reader clarity, and touch readability.
+
+## Icons
+
+Icons should support comprehension rather than replace it.
+
+- Use familiar icon metaphors for common actions.
+- Prefer icons plus labels over icons alone.
+- Reserve unlabeled icon-only controls for truly standard actions in obviously constrained spaces.
+
+## Performance & Connectivity
+
+UNICEF products must still work well in low-bandwidth environments.
+
+- Keep pages light and efficient.
+- Avoid ornamental media or animation that slows task completion.
+- Use imagery only where it adds meaning.
+- Prefer simple, resilient layouts over highly layered interfaces that are expensive to render or maintain.
 
 ## Localization
 
