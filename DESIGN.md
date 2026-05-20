@@ -4,10 +4,14 @@ name: UNICEF Brand Book 4.0
 description: A DESIGN.md interpretation of the UNICEF Brand Book 4.0 with direct brand guidance from the PDF and inferred interface tokens for modern digital work.
 colors:
   primary: "#00AEEF"
+  brand-primary: "#00AEEF"
+  action-primary: "#0047BB"
+  link: "#0047BB"
   secondary: "#FFFFFF"
   tertiary: "#000000"
   neutral: "#D7D2CB"
   on-primary: "#FFFFFF"
+  on-action-primary: "#FFFFFF"
   on-secondary: "#000000"
   on-tertiary: "#FFFFFF"
   surface: "#FFFFFF"
@@ -24,6 +28,11 @@ colors:
   accent-orange-bright: "#FF8200"
   accent-gold: "#FFB500"
   accent-light-cyan: "#9ADBE8"
+  status-success: "#004C45"
+  status-warning: "#FFB500"
+  status-danger: "#E2231A"
+  on-status-success: "#FFFFFF"
+  on-status-danger: "#FFFFFF"
   emergency: "#E2231A"
   on-emergency: "#FFFFFF"
 typography:
@@ -124,11 +133,17 @@ spacing:
   3xl: 64px
 components:
   button-primary:
-    backgroundColor: "{colors.primary}"
-    textColor: "{colors.ink}"
+    backgroundColor: "{colors.action-primary}"
+    textColor: "{colors.on-action-primary}"
     typography: "{typography.label-lg}"
     rounded: "{rounded.none}"
     padding: "{spacing.md}"
+  link-default:
+    backgroundColor: "{colors.surface}"
+    textColor: "{colors.link}"
+    typography: "{typography.body-md}"
+    rounded: "{rounded.none}"
+    padding: "{spacing.sm}"
   button-secondary:
     backgroundColor: "{colors.surface}"
     textColor: "{colors.ink}"
@@ -148,11 +163,29 @@ components:
     rounded: "{rounded.none}"
     padding: "{spacing.lg}"
   card-callout:
-    backgroundColor: "{colors.primary}"
+    backgroundColor: "{colors.brand-primary}"
     textColor: "{colors.ink}"
     typography: "{typography.body-md}"
     rounded: "{rounded.none}"
     padding: "{spacing.lg}"
+  alert-success:
+    backgroundColor: "{colors.status-success}"
+    textColor: "{colors.on-status-success}"
+    typography: "{typography.body-sm}"
+    rounded: "{rounded.none}"
+    padding: "{spacing.md}"
+  alert-warning:
+    backgroundColor: "{colors.status-warning}"
+    textColor: "{colors.ink}"
+    typography: "{typography.body-sm}"
+    rounded: "{rounded.none}"
+    padding: "{spacing.md}"
+  alert-danger:
+    backgroundColor: "{colors.status-danger}"
+    textColor: "{colors.on-status-danger}"
+    typography: "{typography.body-sm}"
+    rounded: "{rounded.none}"
+    padding: "{spacing.md}"
   card-fact:
     backgroundColor: "{colors.surface-alt}"
     textColor: "{colors.ink}"
@@ -251,6 +284,26 @@ components:
 ---
 
 # UNICEF
+
+### Usage Fit
+
+Use this file as the default UNICEF `DESIGN.md` when a project needs broad UNICEF brand guidance across communication, publishing, and light digital surfaces. For enterprise apps, prefer `DESIGN.web-app.md`. For Quarto websites, reports, listings, and long-form publishing, prefer `DESIGN.quarto.md`.
+
+### Agent Priority Rules
+
+- Preserve UNICEF Blue as the core brand signal, but use `action-primary` for app-like primary actions.
+- Treat `brand-primary`, `action-primary`, `link`, and `status-*` as semantic roles, not decorative palette options.
+- Follow official logo rules before making layout or styling decisions.
+- Preserve child dignity, accessibility, and legibility over visual mimicry.
+- Use clear labels, descriptive links, and explicit status text.
+- Keep accents restrained and meaningful.
+
+### Source Conflict Policy
+
+- Brand Book 4.0 governs identity, logo usage, photography, and core brand expression.
+- UNICEF UX/UI design guidelines govern enterprise interaction patterns, labels, forms, tables, and status semantics.
+- Accessibility, dignity, and legibility override visual mimicry when sources are in tension.
+- Quarto documentation governs implementation primitives only for the `site/` example.
 
 ## Overview
 

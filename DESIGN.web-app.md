@@ -4,7 +4,10 @@ name: UNICEF Brand Book 4.0 - Web/App
 description: A UNICEF design system variant optimized for websites and applications while retaining the brand's clarity, dignity, and UNICEF Blue-led identity.
 colors:
   primary: "#00AEEF"
+  brand-primary: "#00AEEF"
   primary-deep: "#0047BB"
+  action-primary: "#0047BB"
+  link: "#0047BB"
   secondary: "#FFFFFF"
   tertiary: "#000000"
   neutral: "#D7D2CB"
@@ -18,10 +21,16 @@ colors:
   accent-orange: "#FF7100"
   accent-gold: "#FFB500"
   danger: "#E2231A"
+  status-success: "#004C45"
+  status-warning: "#FFB500"
+  status-danger: "#E2231A"
   on-primary: "#000000"
   on-primary-deep: "#FFFFFF"
+  on-action-primary: "#FFFFFF"
   on-tertiary: "#FFFFFF"
   on-danger: "#FFFFFF"
+  on-status-success: "#FFFFFF"
+  on-status-danger: "#FFFFFF"
 typography:
   display-lg:
     fontFamily: Noto Sans
@@ -112,7 +121,7 @@ spacing:
   form-max: 640px
 components:
   topbar:
-    backgroundColor: "{colors.primary}"
+    backgroundColor: "{colors.brand-primary}"
     textColor: "{colors.on-primary}"
     typography: "{typography.nav-md}"
     height: 64px
@@ -124,11 +133,17 @@ components:
     width: "{spacing.sidebar}"
     padding: "{spacing.xl}"
   button-primary:
-    backgroundColor: "{colors.primary-deep}"
-    textColor: "{colors.on-primary-deep}"
+    backgroundColor: "{colors.action-primary}"
+    textColor: "{colors.on-action-primary}"
     typography: "{typography.nav-md}"
     rounded: "{rounded.md}"
     padding: "{spacing.lg}"
+  link-default:
+    backgroundColor: "{colors.surface}"
+    textColor: "{colors.link}"
+    typography: "{typography.body-md}"
+    rounded: "{rounded.none}"
+    padding: "{spacing.sm}"
   button-secondary:
     backgroundColor: "{colors.secondary}"
     textColor: "{colors.ink}"
@@ -196,12 +211,24 @@ components:
     rounded: "{rounded.md}"
     padding: "{spacing.xl}"
   toast-success:
+    backgroundColor: "{colors.status-success}"
+    textColor: "{colors.on-status-success}"
+    typography: "{typography.body-sm}"
+    rounded: "{rounded.md}"
+    padding: "{spacing.lg}"
+  panel-success:
     backgroundColor: "{colors.accent-teal}"
     textColor: "{colors.on-tertiary}"
     typography: "{typography.body-sm}"
     rounded: "{rounded.md}"
     padding: "{spacing.lg}"
   alert-warning:
+    backgroundColor: "{colors.status-warning}"
+    textColor: "{colors.ink}"
+    typography: "{typography.body-sm}"
+    rounded: "{rounded.md}"
+    padding: "{spacing.lg}"
+  data-highlight-gold:
     backgroundColor: "{colors.accent-gold}"
     textColor: "{colors.ink}"
     typography: "{typography.body-sm}"
@@ -213,6 +240,18 @@ components:
     typography: "{typography.body-sm}"
     rounded: "{rounded.md}"
     padding: "{spacing.lg}"
+  alert-danger:
+    backgroundColor: "{colors.status-danger}"
+    textColor: "{colors.on-status-danger}"
+    typography: "{typography.body-sm}"
+    rounded: "{rounded.md}"
+    padding: "{spacing.lg}"
+  button-danger-alt:
+    backgroundColor: "{colors.danger}"
+    textColor: "{colors.on-danger}"
+    typography: "{typography.nav-md}"
+    rounded: "{rounded.md}"
+    padding: "{spacing.lg}"
   meta-muted:
     backgroundColor: "{colors.surface}"
     textColor: "{colors.ink-muted}"
@@ -222,6 +261,27 @@ components:
 ---
 
 # UNICEF Web/App
+
+### Usage Fit
+
+Use this file when the target project is an app, dashboard, admin workflow, form-heavy tool, or productivity interface. Copy it into the target project as `DESIGN.md` when UNICEF design must serve a workflow rather than act as the main brand artifact.
+
+### Agent Priority Rules
+
+- Use `brand-primary` for header and institutional chrome.
+- Use `action-primary` and `link` for primary actions, active states, and links.
+- Use `status-success`, `status-warning`, and `status-danger` for status states, always with text or icon cues.
+- Keep labels explicit, sentence case, and action-oriented.
+- Design forms and tables for speed, scanability, and low cognitive load.
+- Avoid disabled-button explanations, icon-only controls, and color-only status signaling.
+- Prefer lightweight, resilient layouts for low-bandwidth contexts.
+
+### Source Conflict Policy
+
+- Brand Book 4.0 governs identity, logo usage, photography, and core brand expression.
+- UNICEF UX/UI design guidelines govern enterprise interaction patterns, labels, forms, tables, status semantics, and app behavior.
+- Accessibility, dignity, and legibility override visual mimicry when sources are in tension.
+- Quarto documentation governs implementation primitives only for the `site/` example, not app UI decisions.
 
 ## Overview
 

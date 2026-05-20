@@ -119,6 +119,7 @@ These inferred tokens are intended to feel faithful to the PDF rather than to cl
 - `DESIGN.md`: The draft design system document
 - `DESIGN.web-app.md`: Variant optimized for websites and application UI
 - `DESIGN.quarto.md`: Variant optimized for Quarto sites, reports, and documentation
+- `design-roles.md`: Upstream semantic color/action/status roles and source conflict policy
 - `site/_quarto.yml`: Quarto website starter configuration
 - `site/_brand-light.yml` and `site/_brand-dark.yml`: Paired brand files for light and dark mode
 - `site/custom.scss` and `site/custom-dark.scss`: Paired Quarto theme overrides

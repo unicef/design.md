@@ -4,6 +4,8 @@ name: UNICEF Brand Book 4.0 - Quarto Websites
 description: A UNICEF design system variant optimized for Quarto-powered reports, documentation sites, storytelling websites, and publication-style content.
 colors:
   primary: "#00AEEF"
+  brand-primary: "#00AEEF"
+  action-primary: "#0047BB"
   link: "#0047BB"
   secondary: "#FFFFFF"
   tertiary: "#000000"
@@ -18,10 +20,16 @@ colors:
   accent-orange: "#FF8200"
   accent-gold: "#FFB500"
   danger: "#E2231A"
+  status-success: "#004C45"
+  status-warning: "#FFB500"
+  status-danger: "#E2231A"
   on-primary: "#000000"
+  on-action-primary: "#FFFFFF"
   on-link: "#FFFFFF"
   on-tertiary: "#FFFFFF"
   on-danger: "#FFFFFF"
+  on-status-success: "#FFFFFF"
+  on-status-danger: "#FFFFFF"
 typography:
   display-lg:
     fontFamily: Noto Sans
@@ -102,7 +110,7 @@ spacing:
   toc-width: 240px
 components:
   navbar:
-    backgroundColor: "{colors.primary}"
+    backgroundColor: "{colors.brand-primary}"
     textColor: "{colors.on-primary}"
     typography: "{typography.nav-sm}"
     height: 64px
@@ -120,14 +128,20 @@ components:
     width: "{spacing.toc-width}"
     padding: "{spacing.lg}"
   button-primary:
-    backgroundColor: "{colors.link}"
-    textColor: "{colors.on-link}"
+    backgroundColor: "{colors.action-primary}"
+    textColor: "{colors.on-action-primary}"
     typography: "{typography.nav-sm}"
     rounded: "{rounded.sm}"
     padding: "{spacing.lg}"
   button-secondary:
     backgroundColor: "{colors.surface}"
     textColor: "{colors.ink}"
+    typography: "{typography.nav-sm}"
+    rounded: "{rounded.sm}"
+    padding: "{spacing.lg}"
+  link-button:
+    backgroundColor: "{colors.link}"
+    textColor: "{colors.on-link}"
     typography: "{typography.nav-sm}"
     rounded: "{rounded.sm}"
     padding: "{spacing.lg}"
@@ -156,8 +170,8 @@ components:
     rounded: "{rounded.sm}"
     padding: "{spacing.xl}"
   callout-success:
-    backgroundColor: "{colors.accent-teal}"
-    textColor: "{colors.on-tertiary}"
+    backgroundColor: "{colors.status-success}"
+    textColor: "{colors.on-status-success}"
     typography: "{typography.body-md}"
     rounded: "{rounded.sm}"
     padding: "{spacing.xl}"
@@ -186,8 +200,20 @@ components:
     rounded: "{rounded.sm}"
     padding: "{spacing.xl}"
   callout-danger:
+    backgroundColor: "{colors.status-danger}"
+    textColor: "{colors.on-status-danger}"
+    typography: "{typography.body-md}"
+    rounded: "{rounded.sm}"
+    padding: "{spacing.xl}"
+  danger-banner:
     backgroundColor: "{colors.danger}"
     textColor: "{colors.on-danger}"
+    typography: "{typography.body-md}"
+    rounded: "{rounded.sm}"
+    padding: "{spacing.xl}"
+  status-warning:
+    backgroundColor: "{colors.status-warning}"
+    textColor: "{colors.ink}"
     typography: "{typography.body-md}"
     rounded: "{rounded.sm}"
     padding: "{spacing.xl}"
@@ -266,6 +292,27 @@ components:
 ---
 
 # UNICEF Quarto Websites
+
+### Usage Fit
+
+Use this file when the target project is a Quarto website, report, documentation portal, publication series, article collection, or listing-driven content site. Copy it into the target project as `DESIGN.md` when UNICEF design needs to shape long-form publishing rather than app workflows.
+
+### Agent Priority Rules
+
+- Use `brand-primary` for Quarto navbar, institutional bars, and restrained brand emphasis.
+- Use `action-primary` and `link` for links, buttons, active navigation, and repo/tool actions.
+- Use `status-success`, `status-warning`, and `status-danger` only for semantic callouts and status-like graphics.
+- Keep headings dark and readable; do not make headings look like links.
+- Prefer short paragraphs, descriptive links, useful figure captions, and calm article rhythm.
+- Use Quarto-native primitives before custom layout code.
+- Keep callouts rare and meaningful.
+
+### Source Conflict Policy
+
+- Brand Book 4.0 governs identity, logo usage, photography, and core brand expression.
+- UNICEF UX/UI design guidelines govern labeling, accessibility, status semantics, and low-bandwidth behavior.
+- Quarto documentation governs navbar, sidebar, listing, callout, theme, and deployment primitives.
+- Accessibility, dignity, and legibility override visual mimicry when sources are in tension.
 
 ## Overview
 

@@ -1,6 +1,6 @@
 # Plan
 
-Last updated: 2026-05-10
+Last updated: 2026-05-20
 
 ## Current Status
 
@@ -8,6 +8,9 @@ Last updated: 2026-05-10
 - `DESIGN.web-app.md` exists as the productivity and enterprise web-app variant.
 - `DESIGN.quarto.md` exists as the Quarto publishing, reports, listings, and documentation variant.
 - The design docs incorporate both `files/Brand Book 4.0.pdf` and the public UNICEF UX/UI design guidelines.
+- `design-roles.md` defines the upstream source matrix, conflict policy, and canonical semantic roles.
+- The semantic roles from `design-roles.md` are reflected in all three `DESIGN*.md` files.
+- Each `DESIGN*.md` now includes `Usage Fit`, `Agent Priority Rules`, and `Source Conflict Policy` guidance near the top of the document body.
 - The runnable Quarto example lives under `site/`.
 - The Quarto example is published via GitHub Pages at `https://unicef.github.io/design.md/`.
 - `site/_quarto.yml` has `website.site-url` set for the GitHub Pages project site.
@@ -21,6 +24,7 @@ Last updated: 2026-05-10
 - `package.json` and `pnpm-lock.yaml` pin local Node tooling for `@google/design.md` and Playwright.
 - `Makefile` provides local commands for preview, render, lint, check, and clean.
 - `.agents/skills/playwright/SKILL.md` documents repo-specific `playwright-cli` usage.
+- A design-doc critique snapshot exists at `.impeccable/critique/2026-05-20T10-44-09Z__design-md.md` with a score of 30/40 and two P1 issues.
 
 ## Current Validation Commands
 
@@ -38,7 +42,7 @@ What `make check` covers:
 - `DESIGN.quarto.md` lint
 - Quarto render of `site/`
 
-Current caveat: the latest shell session used to update this plan could not find `node`, `pnpm`, or `quarto` on `PATH`, so `make check` could not be rerun in that shell. The commands above remain the expected validation path once the local toolchain is available.
+Current validation status: `make check` passed after the semantic role and self-containment updates.
 
 For visual checks:
 
@@ -66,6 +70,130 @@ playwright-cli -s=site-check open "http://127.0.0.1:5360/"
 - The Quarto example is still sample/demo content, not production UNICEF copy.
 - The site has not yet been audited with accessibility tooling such as axe or Lighthouse.
 - The root `README.md` now has user-facing usage instructions, but the project could still benefit from a short release checklist before publishing future changes.
+
+## Critique Findings To Address
+
+The first saved critique of `DESIGN*.md` scored the design-doc system 30/40. The docs are usable, source-grounded, and well supported, but they still risk misapplication by agents that consume a copied `DESIGN.md` without the surrounding repository context.
+
+Priority findings:
+
+- **P1: Base action-color ambiguity.** Addressed by adding semantic action roles and using `action-primary` for base primary buttons.
+- **P1: Variant choice depends too much on README context.** Addressed by adding `Usage Fit` to each design doc.
+- **P2: Status semantics are prose-first, not token-first.** Addressed by adding semantic status tokens to the design docs.
+- **P2: Long sections need compact agent-facing summaries.** Addressed by adding `Agent Priority Rules` to each design doc.
+- **P2: Conflict-resolution guidance is implicit.** Addressed by adding a source conflict policy in `design-roles.md` and each design doc.
+
+## DAG Improvement Strategy
+
+Do not treat the critique as a list of one-off prose edits. Treat it as feedback on the documentation-generation pipeline. The durable fix is to introduce clearer upstream nodes and validation gates so future variants remain coherent.
+
+### Proposed DAG
+
+```text
+source materials
+  -> source matrix
+  -> canonical semantic model
+  -> variant projections
+  -> generated/maintained DESIGN*.md
+  -> validation gates
+  -> Quarto demonstration site
+  -> screenshots/accessibility checks
+```
+
+### Source Materials Node
+
+Inputs:
+
+- `files/Brand Book 4.0.pdf`
+- UNICEF UX/UI design guidelines
+- Google/Stitch `DESIGN.md` format specification
+- approved logo and font assets under `files/`
+
+Artifact:
+
+- `design-roles.md` records which source governs each topic: logo, color, typography, app behavior, accessibility, publishing, imagery, and partnerships
+
+Why this matters:
+
+- It prevents undocumented conflict resolution when Brand Book 4.0 and UX/UI app guidance emphasize different things.
+
+### Canonical Semantic Model Node
+
+Artifact:
+
+- `design-roles.md` defines reusable semantic roles, such as `brand-primary`, `action-primary`, `link`, `status-success`, `status-warning`, `status-danger`, `surface`, `text`, `border`, and `data-series-*`
+
+This now sits upstream as the source of truth for role decisions and is reflected into the three `DESIGN*.md` variants.
+
+Why this matters:
+
+- It fixes action-color ambiguity at the source instead of manually correcting prose in each file.
+- It lets variants duplicate color values while preserving different role semantics.
+
+### Variant Projection Node
+
+Each `DESIGN*.md` should be treated as a projection of the canonical model plus source-specific rules.
+
+- `DESIGN.md`: brand/general projection
+- `DESIGN.web-app.md`: productivity and enterprise app projection
+- `DESIGN.quarto.md`: publishing and Quarto-site projection
+
+Each projection includes a compact `Usage Fit` section near the top of the body.
+
+Each projection includes an `Agent Priority Rules` section with hard rules that are safe to apply when the file is copied into another repo by itself.
+
+Why this matters:
+
+- It reduces dependency on the root README for correct variant selection.
+- It makes copied design docs more self-contained for agents.
+
+### Conflict Policy Node
+
+The shared policy now appears in `design-roles.md` and the design-doc projections:
+
+- Brand Book governs identity, logo usage, photography, and core brand expression.
+- UNICEF UX/UI design guidelines govern enterprise interaction patterns, labeling, forms, status semantics, and app behavior.
+- Accessibility and dignity override visual mimicry when there is tension.
+- Quarto docs govern implementation primitives for the demonstration site.
+
+Why this matters:
+
+- It gives agents a deterministic way to choose between competing instructions.
+
+### Validation Gates Node
+
+Keep current gates:
+
+- `pnpm run lint:design`
+- `make render`
+- GitHub Pages deploy workflow
+- screenshot artifact workflow
+
+Add future gates:
+
+- semantic-token consistency check: action/status role names should exist in expected variants
+- variant-self-containment check: every variant should include `Usage Fit` and `Agent Priority Rules`
+- conflict-policy check: each variant should explain how to resolve source conflicts
+- accessibility/performance audit for the Quarto site
+
+Why this matters:
+
+- It prevents the same ambiguity from reappearing after future edits.
+
+### Quarto Demonstration Node
+
+The Quarto site should continue to demonstrate `DESIGN.quarto.md`, but it should not be the source of truth.
+
+The site should consume decisions from upstream nodes:
+
+- semantic roles for action/link/status colors
+- approved logo asset manifest
+- Quarto-specific layout and listing rules
+- accessibility and writing guidance
+
+Why this matters:
+
+- It keeps implementation aligned without letting a demo-specific styling choice rewrite the design system.
 
 ## Recommended Next Slices
 
@@ -181,5 +309,7 @@ Do these next, in order:
 1. Live GitHub Pages smoke test
 2. Asset scope and repo size review
 3. Screenshot baseline hardening
+4. Accessibility and performance audit
+5. Content realism pass
 
-These are the highest-leverage slices before adding more features.
+The first three critique-driven DAG improvements are complete. The next highest-leverage work is validating the published site and hardening quality gates around the implementation.
